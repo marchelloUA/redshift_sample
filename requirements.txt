@@ -1,0 +1,8 @@
+# Core Redshift connection and ELT
+psycopg2-binary>=2.9
+pandas>=2.0
+boto3>=1.26
+
+# Testing
+pytest>=7.0
+pytest-mock>=3.0

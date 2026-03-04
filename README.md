@@ -129,4 +129,22 @@ This repository is a hands-on demonstration of strong Redshift data engineering 
 - Clear technical reasoning in code comments  
 
 It is intended to reflect the approach of an engineer who takes full ownership of the data warehouse layer and continuously evolves it for reliability, scalability, and maintainability.
+
+### Python Tools
+
+Python modules augment the SQL examples with production‑ready utilities:
+
+- **`redshift_connector.py`**: connection pooling, query/​procedure helpers, retry logic.
+- **`elt_pipeline.py`**: a task‑oriented ELT framework supporting retries, parallelism, and dependency graphs.
+
+Both are located under `python/` and are fully commented for real‑world usage.
+
+### Testing & Integration
+
+Unit tests live in `tests/` and cover the main Python components. Integration tests verify that SQL scripts contain valid DDL, that `requirements.txt` exists, and that the README includes key topic headers. Run `pytest` from the repo root to exercise everything.
+
+### Requirements
+
+External dependencies are declared in `requirements.txt` using non‑strict version specifiers to allow flexibility in shared environments.
+
 ```
